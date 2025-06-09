@@ -1,1 +1,40 @@
 /* Add your CSS here */
+
+/* Set a blue background similar to Intel's brand color */
+body {
+  background-color: #0071c5; /* Intel blue */
+  margin: 0; /* Remove default margin */
+  font-family: Arial, sans-serif; /* Simple, clean font */
+  color: #fff; /* White text for good contrast */
+}
+
+/* Center all content on the page */
+.container {
+  /* Use margin auto and set a max width for centering */
+  max-width: 600px;
+  margin: 60px auto 0 auto; /* Top margin for spacing */
+  text-align: center; /* Center text inside the container */
+  padding: 20px;
+}
+
+/* Style for the Intel logo */
+.logo {
+  width: 120px; /* Set logo width */
+  height: auto; /* Keep aspect ratio */
+  margin-bottom: 20px; /* Space below logo */
+}
+
+/* Headline style */
+.headline {
+  font-size: 2.2em; /* Make headline large */
+  font-weight: bold;
+  margin-bottom: 10px; /* Space below headline */
+  letter-spacing: 1px; /* Slight spacing for clarity */
+}
+
+/* Subheading style */
+.subheading {
+  font-size: 1.2em; /* Slightly larger than normal text */
+  margin-bottom: 30px; /* Space below subheading */
+  color: #e0e0e0; /* Lighter color for subheading */
+}
