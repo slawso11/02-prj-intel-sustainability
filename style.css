@@ -38,3 +38,96 @@ body {
   margin-bottom: 30px; /* Space below subheading */
   color: #e0e0e0; /* Lighter color for subheading */
 }
+
+/* Timeline container uses Flexbox for horizontal scrolling on large screens */
+.timeline {
+  display: flex; /* Use Flexbox */
+  flex-direction: row; /* Arrange milestones in a row */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  gap: 24px; /* Space between milestones */
+  padding: 20px 0; /* Top and bottom padding */
+  margin-bottom: 30px; /* Space below timeline */
+}
+
+/* Each milestone card */
+.milestone {
+  background: #fff; /* White background for contrast */
+  color: #0071c5; /* Intel blue text */
+  border-radius: 8px; /* Rounded corners */
+  padding: 16px;
+  min-width: 200px; /* Minimum width for each milestone */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Soft shadow */
+  flex: 0 0 auto; /* Prevent shrinking/growing */
+  text-align: left; /* Align text to the left */
+  font-family: 'Segoe UI', Arial, sans-serif; /* Consistent, modern font */
+  transition: box-shadow 0.3s, transform 0.3s; /* Smooth hover effect */
+  position: relative; /* For hover details */
+  overflow: hidden; /* Hide overflow for details */
+  margin-bottom: 0; /* Remove extra margin for consistency */
+}
+
+/* Headings inside milestone cards */
+.milestone h2 {
+  font-size: 1.4em;
+  margin: 0 0 4px 0;
+  color: #005fa3; /* Slightly darker Intel blue */
+  font-weight: bold;
+}
+
+.milestone h3 {
+  font-size: 1.1em;
+  margin: 0 0 8px 0;
+  color: #0071c5;
+  font-weight: normal;
+}
+
+/* Image styling for milestone cards */
+.milestone img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  border-radius: 4px;
+  margin: 10px 0;
+  display: block;
+}
+
+/* Paragraph styling for milestone cards */
+.milestone p {
+  font-size: 1em;
+  color: #333; /* Dark text for readability */
+  margin: 8px 0 0 0;
+  line-height: 1.5;
+}
+
+/* Hide additional details by default */
+.milestone .details {
+  display: none;
+  font-size: 0.95em;
+  color: #005fa3;
+  margin-top: 10px;
+}
+
+/* On hover, show additional details and add interactivity */
+.milestone:hover {
+  box-shadow: 0 4px 16px rgba(0,113,197,0.18); /* Stronger shadow */
+  transform: translateY(-4px) scale(1.03); /* Slight lift and scale */
+  z-index: 1;
+}
+
+/* Show details on hover */
+.milestone:hover .details {
+  display: block;
+}
+
+/* Responsive: Stack milestones vertically on small screens */
+@media (max-width: 600px) {
+  .timeline {
+    flex-direction: column; /* Stack milestones vertically */
+    gap: 16px; /* Less space between milestones */
+    overflow-x: visible; /* No horizontal scroll needed */
+  }
+  .milestone {
+    min-width: 0; /* Allow milestones to shrink */
+    width: 100%; /* Full width */
+  }
+}
